@@ -1,9 +1,9 @@
 import React from 'react'
 import Loader from "react-loader-spinner";
 function Contestant({poll,contestant,load}) {
-   console.log(contestant)
-   
-   
+
+
+    // Fuction to set background color
     function getColor(poll,str) {
        
         if (poll.largest[0]==str) {
@@ -18,8 +18,6 @@ function Contestant({poll,contestant,load}) {
       if (load){
     return (
         
-      
-
         <div className="contestants" style={{backgroundColor : getColor(poll,contestant[1])}} > 
             {
            poll.Poll_State!= "voting" ? (

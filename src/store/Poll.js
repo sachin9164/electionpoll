@@ -1,39 +1,39 @@
 import dummyApi from "../dummy";
 
-export const GET_INIT = "items/GET_INITS";
-export const GET_DONE = "items/GET_DONES";
-export const SET_SELECTED_POLL = "categories/SET_SELECTEDS";
+export const GET_INIT = "items/GET_INIT";
+export const GET_DONE = "items/GET_DONE";
+export const SET_SELECTED_POLL = "categories/SET_SELECTED";
 
 export function getPoll() {
   return async dispatch => {
  
     dispatch({ type: GET_INIT });
     let item = await dummyApi.getPoll();
-    //console.log(item)
+  
     let entries = Object.entries(item);
     let sorted = entries.sort((a, b) => a[1] - b[1]);
-    var largest = [1,1] ;
-    var slargest =[1,1] ;
+    var largest = [] ;
+    var slargest =[] ;
      
-    var x= {}
-    //console.log(sorted)
+    var payload= {}
+    //Sorting data and updating to store
      if (item.Poll_State=="Counting") {
           largest = sorted[sorted.length-1];
-          x = {...item,largest,slargest}
+          payload = {...item,largest,slargest}
           
         } else if(item.Poll_State=="Declared") {
           largest = sorted[sorted.length-1];
           slargest = sorted[sorted.length-2]
-          x= {...item,largest,slargest}
+          payload= {...item,largest,slargest}
      }else{
-              x = {...item,largest,slargest}
+              payload= {...item,largest,slargest}
      }
 
-    console.log(x)
+ 
     
     dispatch({
       type: GET_DONE,
-      payload: x
+      payload: payload
     });
   };
  

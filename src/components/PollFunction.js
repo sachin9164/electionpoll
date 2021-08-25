@@ -8,28 +8,19 @@ function PollFunction(prop) {
    
     const[load,setLoad]=useState(false)
   
-    var time =5000
+    let time =5000
+    //Hitting the data every five second
     useEffect(()=>{
-
-    
-      
 
       setInterval(()=>{
         prop.getPoll()
-        //setArray(maxArray(prop.poll.poll))
         setLoad(true)
   
       },time);
        
-      
     },[])
 
 
-    
-  
- 
-  
-  //console.log(poll.poll)
     if (isLoading) {
         return <div className="loader">Loading...</div>;
       }
