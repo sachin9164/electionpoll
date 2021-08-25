@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #515151;
+  padding: 20px;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+}
+
+$primary-color: rgb(23, 78, 80);
+$danger-color: #cc0000;
+
+.bold {
+  font-weight: bold;
+}
+
+.poll {
+  margin: 20px;
+  h3 {
+    border: 1px solid lightgray;
+    display: inline-block;
+    padding: 10px;
+    color: red;
+    margin-top: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  .wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contestants {
+    border: 1px solid lightgray;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .contestantm {
+    display: flex;
+  }
+  .contestant {
+    width: 150px;
+    height: 150px;
+    border: 1px solid lightgray;
+    text-align: center;
+    margin: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  flex: 0 0 auto;
+  display: flex;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.app-body {
+  flex: 1 0 0;
+  overflow-y: auto;
+}

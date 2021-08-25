@@ -1,0 +1,182 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "name": "Nolan",
+      "blog": "wappalyzer is a chrome extension to find out the technology stack of any website. Instantly reveal the technology stack any website, such as CMS, ecommerce platform or payment processor, as well as company and contact details.",
+      "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--bv0RhMB2--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/615794/aeebe807-24a2-4f29-ae0d-cfd45bcae517.jpg",
+      "title": "Some useful tools for a web developer.",
+      "comment": [
+        "nice job Nolan",
+        "Thanks for sharing your Nola. Keep it up.",
+        "Please support the channel"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Stark",
+      "blog": "CodeTriage helps by picking a handful of open issues and delivering them directly to your inbox. After you sign up for CodeTriage, you pick the repos you want to help with, and they periodically send you issues. There is also a section with docs and tips for making your contribution journey successful.",
+      "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--3cpeEUUr--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/494010/c98553e8-d86d-45a7-8c93-7c8343f43081.jpg",
+      "title": "Top resources to start with open source!",
+      "comment": [
+        "Thanks for sharing your Tom. Keep it up.",
+        "Woow, relates 🙌💥",
+        "Thank you so much."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "blog": "And we can take advantage of the Async/Await pattern. Basic async and await is simple. Things get more complicated when you use loop to do async operations in the body. Normal loop along with your api calls won't work, because it is sync. Your async task is sync, the loop will finish before the async task can even respond. So, we need to use Promises to manage async tasks. Promises do state managment of async operations. In languages like Java or Python, this is not something you need to worry about.",
+      "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--yBO8MjL3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/328573/4f7d2e37-25e5-417e-a642-914497b73a1f.JPG",
+      "title": "JavaScript - Make API calls asynchronously in a loop - (Promises, Async/Await)",
+      "comment": [
+        "Good work.",
+        "Nice Explanation.",
+        "Javascript is everywhere."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sachin",
+      "blog": "This package allows you to authenticate with one time password access (OTP).Basic async and await is simple. Things get more complicated when you use loop to do async operations in the body. Normal loop along with your api calls won't work, because it is sync. Your async task is sync, the loop will finish before the async task can even respond. So, we need to use Promises to manage async tasks. Promises do state managment of async operations. In languages like Java or Python, this is not something you need to worry about.",
+      "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--H2FktM4o--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/687571/f63c5803-83e6-4dfd-9d8b-dbb76ee25d7f.jpg",
+      "title": "Handle OTP Auth via your own source code",
+      "comment": [
+        "Excelent article. :)",
+        "Thank you so much!.",
+        "Share maximum."
+      ]
+    }
+  ],
+  "poll": [
+    {
+      "S.No": 0,
+      "Poll_State": "voting",
+      "contestant1": 0,
+      "contestant2": 0,
+      "contestant3": 0,
+      "contestant4": 0
+    },
+    {
+      "S.No": 1,
+      "Poll_State": "voting",
+      "contestant1": 0,
+      "contestant2": 0,
+      "contestant3": 0,
+      "contestant4": 0
+    },
+    {
+      "S.No": 2,
+      "Poll_State": "voting",
+      "contestant1": 0,
+      "contestant2": 0,
+      "contestant3": 0,
+      "contestant4": 0
+    },
+    {
+      "S.No": 3,
+      "Poll_State": "Counting",
+      "contestant1": 16,
+      "contestant2": 1,
+      "contestant3": 5,
+      "contestant4": 30
+    },
+    {
+      "S.No": 4,
+      "Poll_State": "Counting",
+      "contestant1": 42,
+      "contestant2": 8,
+      "contestant3": 10,
+      "contestant4": 43
+    },
+    {
+      "S.No": 5,
+      "Poll_State": "Counting",
+      "contestant1": 62,
+      "contestant2": 12,
+      "contestant3": 12,
+      "contestant4": 71
+    },
+    {
+      "S.No": 6,
+      "Poll_State": "Counting",
+      "contestant1": 86,
+      "contestant2": 18,
+      "contestant3": 16,
+      "contestant4": 92
+    },
+    {
+      "S.No": 7,
+      "Poll_State": "Counting",
+      "contestant1": 103,
+      "contestant2": 20,
+      "contestant3": 21,
+      "contestant4": 120
+    },
+    {
+      "S.No": 8,
+      "Poll_State": "Counting",
+      "contestant1": 113,
+      "contestant2": 29,
+      "contestant3": 23,
+      "contestant4": 143
+    },
+    {
+      "S.No": 9,
+      "Poll_State": "Counting",
+      "contestant1": 123,
+      "contestant2": 32,
+      "contestant3": 27,
+      "contestant4": 171
+    },
+    {
+      "S.No": 10,
+      "Poll_State": "Counting",
+      "contestant1": 137,
+      "contestant2": 42,
+      "contestant3": 30,
+      "contestant4": 187
+    },
+    {
+      "S.No": 11,
+      "Poll_State": "Counting",
+      "contestant1": 164,
+      "contestant2": 49,
+      "contestant3": 31,
+      "contestant4": 201
+    },
+    {
+      "S.No": 12,
+      "Poll_State": "Counting",
+      "contestant1": 181,
+      "contestant2": 56,
+      "contestant3": 36,
+      "contestant4": 220
+    },
+    {
+      "S.No": 13,
+      "Poll_State": "Counting",
+      "contestant1": 193,
+      "contestant2": 59,
+      "contestant3": 37,
+      "contestant4": 236
+    },
+    {
+      "S.No": 14,
+      "Poll_State": "Declared",
+      "contestant1": 193,
+      "contestant2": 59,
+      "contestant3": 37,
+      "contestant4": 236
+    },
+    {
+      "S.No": 15,
+      "Poll_State": "Declared",
+      "contestant1": 193,
+      "contestant2": 59,
+      "contestant3": 37,
+      "contestant4": 236
+    }
+  ]
+}
