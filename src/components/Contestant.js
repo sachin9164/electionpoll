@@ -15,7 +15,7 @@ function Contestant({poll,contestant,load}) {
           return "white";
         }
       }
-      if (load){
+      if (true){
     return (
         
         <div className="contestants" style={{backgroundColor : getColor(poll,contestant[1])}} > 

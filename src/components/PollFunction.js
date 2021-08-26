@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { connect } from "react-redux";
 import { getPoll } from "../store/Poll";
 import Contestant from './Contestant';
+import Loader from "react-loader-spinner";
 function PollFunction(prop) {
-    let finalArray = []
+   
     const {isLoading,poll}= prop
    
     const[load,setLoad]=useState(false)
@@ -22,7 +23,18 @@ function PollFunction(prop) {
 
 
     if (isLoading) {
-        return <div className="loader">Loading...</div>;
+        return <div className="loader">
+          <div className="poll">
+           <h3 >Status : Loading..</h3>
+      
+      <br></br>
+      <div className="contestants" >
+          Contestants
+      </div>
+      <br></br>
+      
+          </div>
+          </div>
       }
    
     else if(load){
@@ -36,6 +48,7 @@ function PollFunction(prop) {
           <div className="contestants" >
               Contestants
           </div>
+          
           <br></br>
           <div className="wraper" >
            <Contestant poll={poll.poll} contestant={ [poll.poll.contestant1,'contestant1'] } load={load}/>

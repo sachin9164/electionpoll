@@ -4,7 +4,7 @@ export const GET_INIT = "items/GET_INIT";
 export const GET_DONE = "items/GET_DONE";
 export const SET_SELECTED_POLL = "categories/SET_SELECTED";
 
-export function getPoll() {
+export function  getPoll() {
   return async dispatch => {
  
     dispatch({ type: GET_INIT });
@@ -12,8 +12,8 @@ export function getPoll() {
   
     let entries = Object.entries(item);
     let sorted = entries.sort((a, b) => a[1] - b[1]);
-    var largest = [] ;
-    var slargest =[] ;
+    let largest = [] ;
+    let slargest =[] ;
      
     var payload= {}
     //Sorting data and updating to store
