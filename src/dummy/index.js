@@ -21,7 +21,7 @@ if (i<=14) {
 }else{
  i=15;
 }
-  console.log(i)
+
   return data.poll[i];
 }
 export default {

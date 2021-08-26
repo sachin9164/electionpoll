@@ -1,7 +1,8 @@
 import React from 'react'
 import Loader from "react-loader-spinner";
-function Contestant({poll,contestant,load}) {
+function Contestant({data,contestant,load}) {
 
+ 
 
     // Fuction to set background color
     function getColor(poll,str) {
@@ -11,32 +12,36 @@ function Contestant({poll,contestant,load}) {
         }else if(poll.slargest[0] ==str){
           return "#ffe699";
         }else{
-          console.log('white')
+          
           return "white";
         }
       }
-      if (true){
+      if (load){
     return (
         
-        <div className="contestants" style={{backgroundColor : getColor(poll,contestant[1])}} > 
+
+        
+        <div className="contestants" style={{backgroundColor : getColor(data,contestant[0])}} > 
             {
-           poll.Poll_State!= "voting" ? (
+           data.data[1][1]!= "voting" ? (
            <div className=""  >
-               <h4>{contestant[1]}</h4>
-               <p>{contestant[0]} </p>
+               <h4>{contestant[0]}</h4>
+               <p>{contestant[1]} </p>
                
           </div>) :
            (<div className="" >
-          <p>{contestant[1]}</p><Loader
+             <p>{contestant[0]}</p>
+         <Loader
           type="Puff"
           color="#00BFFF"
-           height={100}
-        width={100}
+           height={60}
+        width={60}
          
        />
       </div>)
          }
          </div>
+         
        
             
     )}else{

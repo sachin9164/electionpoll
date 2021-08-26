@@ -1,48 +1,72 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from "react-redux";
 import { getPoll } from "../store/Poll";
-import Contestant from './Contestant';
 import Loader from "react-loader-spinner";
+import Contestant from './Contestant';
+
 function PollFunction(prop) {
    
     const {isLoading,poll}= prop
    
     const[load,setLoad]=useState(false)
-  
+    
+    
     let time =5000
     //Hitting the data every five second
+    let interVal;
     useEffect(()=>{
-
-      setInterval(()=>{
+       interVal=setInterval(()=>{
+        
+        console.log(poll)
         prop.getPoll()
         setLoad(true)
   
+      
       },time);
-       
+
+     
+      
     },[])
+
+    
 
 
     if (isLoading) {
-        return <div className="loader">
+        return <div className="mainloader">
           <div className="poll">
            <h3 >Status : Loading..</h3>
-      
-      <br></br>
-      <div className="contestants" >
-          Contestants
-      </div>
-      <br></br>
-      
+
+            <br></br>
+            <div className="contestants" >
+              Contestants
+             </div>
+            <br></br>
+          
+            <div className="loader">
+              <Loader
+                type="ThreeDots"
+                color="#00BFFF"
+                height={60}
+                width={60}
+          
+              />
+              </div>
+     
+          
+
+            
           </div>
           </div>
       }
    
     else if(load){
-        
+      let status= poll.poll.data.filter((item)=>item[0]=="Poll_State")
+     
       return <div className="poll">
-          {/* <p>{array[0]}</p> */}
+      
+
           
-          <h3 >Status : {poll.poll.Poll_State}</h3>
+          <h3 >Status : {status[0][1]}</h3>
       
           <br></br>
           <div className="contestants" >
@@ -51,10 +75,18 @@ function PollFunction(prop) {
           
           <br></br>
           <div className="wraper" >
-           <Contestant poll={poll.poll} contestant={ [poll.poll.contestant1,'contestant1'] } load={load}/>
-            <Contestant poll={poll.poll} contestant={[poll.poll.contestant2,'contestant2']} load={load}/>
-            <Contestant poll={poll.poll} contestant={[poll.poll.contestant3,'contestant3']} load={load}/>
-            <Contestant poll={poll.poll} contestant={[poll.poll.contestant4,'contestant4']} load={load}/> 
+
+            {
+              poll.poll.data.map((item)=>{
+               if (item[0].includes("contestant")) {
+                
+                return <Contestant key={1} contestant={item } load={load} data={poll.poll}/>
+               } else {
+                return null
+               } 
+              })
+            }
+        
           </div>
     
           </div>;
@@ -62,7 +94,7 @@ function PollFunction(prop) {
         return (
             <div>
               <br></br>
-                <h1>Election will be started in Few Seconds</h1>
+                <h1>Election will be started in Few Seconds </h1>
             </div>
         )
     }

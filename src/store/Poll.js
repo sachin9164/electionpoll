@@ -9,24 +9,29 @@ export function  getPoll() {
  
     dispatch({ type: GET_INIT });
     let item = await dummyApi.getPoll();
-  
-    let entries = Object.entries(item);
+ 
+      let myentries = Object.entries(item)
+      let entries = Object.entries(item);
+    
     let sorted = entries.sort((a, b) => a[1] - b[1]);
+   
     let largest = [] ;
     let slargest =[] ;
      
     var payload= {}
     //Sorting data and updating to store
-     if (item.Poll_State=="Counting") {
-          largest = sorted[sorted.length-1];
-          payload = {...item,largest,slargest}
+
+    if (item.Poll_State=="Counting") {
+      largest = sorted[sorted.length-1];
+      payload = {data :myentries,largest,slargest}
+      
           
         } else if(item.Poll_State=="Declared") {
           largest = sorted[sorted.length-1];
           slargest = sorted[sorted.length-2]
-          payload= {...item,largest,slargest}
+          payload= {data :sorted.reverse(),largest,slargest}
      }else{
-              payload= {...item,largest,slargest}
+          payload= {data :myentries,largest,slargest}
      }
 
  

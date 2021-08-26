@@ -10,10 +10,6 @@ import {
 
 import PollFunction from "./PollFunction";
 
-
-
-
-
 function App() {
   return (
     <Router>
